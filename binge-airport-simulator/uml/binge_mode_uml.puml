@@ -1,0 +1,30 @@
+@startuml
+
+interface EpisodeIterator {
+    +hasNext() : boolean
+    +next() : Episode
+}
+
+class Episode {
+    -title : String
+    -runtimeSec : int
+}
+
+class Season {
+    +addEpisode(Episode)
+    +iterator() : Iterator<Episode>
+}
+
+class Series {
+    +addSeason(Season)
+}
+
+Season --> "1..*" Episode
+Series --> "1..*" Season
+
+class SeasonIterator implements EpisodeIterator
+class ReverseSeasonIterator implements EpisodeIterator
+class ShuffleSeasonIterator implements EpisodeIterator
+class BingeIterator implements EpisodeIterator
+
+@enduml
