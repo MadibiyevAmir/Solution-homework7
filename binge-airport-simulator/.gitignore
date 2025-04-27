@@ -1,1 +1,24 @@
+# Java
+*.class
+*.jar
+*.war
+*.ear
+
+# IDEs and editors
+/.idea/
+/*.iml
+/.vscode/
+/*.log
+
+# OS generated
+.DS_Store
+Thumbs.db
+
+# Build directories
+/bin/
+/build/
+/out/
+
+# UML cache
+*.svg
 
